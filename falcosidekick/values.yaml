@@ -811,7 +811,7 @@ testConnection:
 
 webui:
   # -- enable Falcosidekick-UI
-  enabled: false
+  enabled: true
   # -- number of running pods
   replicaCount: 2
   # -- Log level ("debug", "info", "warning", "error")
@@ -836,6 +836,9 @@ webui:
   podSecurityContext:
     runAsUser: 1234
     fsGroup: 1234
+
+  # -- Extra environment variables
+  extraEnv: []
 
   # -- Web UI container securityContext
   securityContext: {}

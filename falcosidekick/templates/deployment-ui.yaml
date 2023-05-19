@@ -74,6 +74,9 @@ spec:
             {{- if .Values.webui.allowcors }}
             - "-x"
             {{- end}}
+          {{- if .Values.webui.extraEnv }}
+          env: {{ toYaml .Values.webui.extraEnv | nindent 12 }}
+          {{- end }}
           ports:
             - name: http
               containerPort: 2802
